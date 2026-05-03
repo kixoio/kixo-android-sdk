@@ -21,7 +21,7 @@ dependencyResolutionManagement {
 `app/build.gradle.kts`:
 
 ```kotlin
-implementation("io.kixo:kixo-android-sdk:0.1.0-alpha4")
+implementation("io.kixo:kixo-android-sdk:0.1.0-alpha5")
 ```
 
 Available versions are listed in `repo/io/kixo/kixo-android-sdk/`.
