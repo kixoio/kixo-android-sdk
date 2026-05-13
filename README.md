@@ -194,17 +194,15 @@ the agent integrates Kixo correctly without round-tripping for clarification.
   across process restarts. Until `Kixo.grantConsent()` is called,
   the SDK ships only the bare minimum (lifecycle, version registry).
 - Debug: `Kixo.diagnostics()` returns a `KixoDiagnostics` snapshot
-  — `lifecycleState`, queue health, environment, apiHost. Use this
-  to answer "why aren't events landing?" before reaching for logcat.
-  `Kixo.flush()` forces the next batch immediately.
+  with `lifecycleState`, queue buffered count, retry tier, and
+  paused state. Use this to answer "why aren't events landing?"
+  before reaching for logcat. `Kixo.flush()` forces the next batch
+  immediately.
 - The SDK NEVER crashes the host. Every failure path swallows + logs
   to logcat with tag `Kixo`. If you see no SDK logs at all on cold
   launch, the most likely cause is `Kixo.configure` not being called.
-- HTTP ingest is HTTPS-only. The SDK auto-selects
-  `https://sdk.kixo.io` for release builds and
-  `https://sdk.dev.kixo.io` when `applicationInfo.flags` carries
-  `FLAG_DEBUGGABLE`. Override only via
-  `KixoConfiguration.Builder(...).apiHost(...)`.
+- Ingest is HTTPS-only and fully managed by Kixo — no host or
+  endpoint configuration needed.
 ```
 
 ---
