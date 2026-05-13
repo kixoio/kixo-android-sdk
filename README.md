@@ -9,9 +9,9 @@ add the repo to your Gradle config and pull the SDK like any other
 dependency. Source code, issue tracker, and contribution flow live
 separately; this is the **distribution** repo only.
 
-- **Latest version**: `0.1.1`
+- **Latest version**: `0.1.2`
 - **Package**: `io.kixo.sdk` · **Entry point**: `io.kixo.sdk.Kixo`
-- **Maven coords**: `io.kixo:kixo-android-sdk:0.1.1`
+- **Maven coords**: `io.kixo:kixo-android-sdk:0.1.2`
 - **Available versions**: see [`repo/io/kixo/kixo-android-sdk/`](repo/io/kixo/kixo-android-sdk/)
 - **Docs**: <https://docs.kixo.io/docs/sdk/android>
 
@@ -38,7 +38,7 @@ In your `app/build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("io.kixo:kixo-android-sdk:0.1.1")
+    implementation("io.kixo:kixo-android-sdk:0.1.2")
 }
 ```
 
@@ -52,11 +52,11 @@ as `implementation` in `:core_domain` does NOT make `Kixo` visible
 to `:app`. Pick one:
 
 - **Recommended**: every module that calls `Kixo.*` declares
-  `implementation("io.kixo:kixo-android-sdk:0.1.1")` itself. Each
+  `implementation("io.kixo:kixo-android-sdk:0.1.2")` itself. Each
   module's classpath stays minimal; use a version catalog
   (`libs.kixo.sdk`) so the version lives in one place.
 - **Alternative**: the library module uses
-  `api("io.kixo:kixo-android-sdk:0.1.1")` to re-export Kixo to its
+  `api("io.kixo:kixo-android-sdk:0.1.2")` to re-export Kixo to its
   consumers. Only worth it when the library re-uses Kixo types in
   its own public signatures.
 
@@ -186,7 +186,7 @@ the agent integrates Kixo correctly without round-tripping for clarification.
   `KixoDiagnostics`).
 - Install via Gradle. Add this Maven repo to `settings.gradle.kts`:
   `maven { url = uri("https://raw.githubusercontent.com/kixoio/kixo-android-sdk/main/repo") }`
-  Then `implementation("io.kixo:kixo-android-sdk:0.1.1")` in
+  Then `implementation("io.kixo:kixo-android-sdk:0.1.2")` in
   `app/build.gradle.kts`. minSdk 24, targetSdk 35, JVM 17.
 - Initialise from `Application.onCreate` with
   `Kixo.configure(this, "kx_proj_…", "kx_key_…")`. The SDK
@@ -223,7 +223,7 @@ the agent integrates Kixo correctly without round-tripping for clarification.
   endpoint configuration needed.
 - Multi-module Gradle: `implementation` is NOT transitive. Every
   module that calls `Kixo.*` must declare its own
-  `implementation("io.kixo:kixo-android-sdk:0.1.1")`. Alternative:
+  `implementation("io.kixo:kixo-android-sdk:0.1.2")`. Alternative:
   the library module uses `api(...)` to re-export Kixo to consumers.
   The error if you forget is `Unresolved reference: Kixo`.
 ```
