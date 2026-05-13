@@ -45,6 +45,24 @@ dependencies {
 Internet permission is bundled in the SDK manifest — no extra
 `uses-permission` declarations needed for basic ingest.
 
+### Multi-module Gradle projects
+
+Gradle's `implementation` is **not transitive**: declaring the SDK
+as `implementation` in `:core_domain` does NOT make `Kixo` visible
+to `:app`. Pick one:
+
+- **Recommended**: every module that calls `Kixo.*` declares
+  `implementation("io.kixo:kixo-android-sdk:0.1.1")` itself. Each
+  module's classpath stays minimal; use a version catalog
+  (`libs.kixo.sdk`) so the version lives in one place.
+- **Alternative**: the library module uses
+  `api("io.kixo:kixo-android-sdk:0.1.1")` to re-export Kixo to its
+  consumers. Only worth it when the library re-uses Kixo types in
+  its own public signatures.
+
+If you hit `Unresolved reference: Kixo` in a module, that module is
+missing its own dependency declaration.
+
 ---
 
 ## Configure
@@ -203,6 +221,11 @@ the agent integrates Kixo correctly without round-tripping for clarification.
   launch, the most likely cause is `Kixo.configure` not being called.
 - Ingest is HTTPS-only and fully managed by Kixo — no host or
   endpoint configuration needed.
+- Multi-module Gradle: `implementation` is NOT transitive. Every
+  module that calls `Kixo.*` must declare its own
+  `implementation("io.kixo:kixo-android-sdk:0.1.1")`. Alternative:
+  the library module uses `api(...)` to re-export Kixo to consumers.
+  The error if you forget is `Unresolved reference: Kixo`.
 ```
 
 ---
