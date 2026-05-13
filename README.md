@@ -13,7 +13,7 @@ separately; this is the **distribution** repo only.
 - **Package**: `io.kixo.sdk` · **Entry point**: `io.kixo.sdk.Kixo`
 - **Maven coords**: `io.kixo:kixo-android-sdk:0.1.4`
 - **Available versions**: see [`repo/io/kixo/kixo-android-sdk/`](repo/io/kixo/kixo-android-sdk/)
-- **Docs**: <https://docs.kixo.io/docs/sdk/android>
+- **Docs**: <https://docs.kixo.io/sdk/android>
 
 ---
 
@@ -166,7 +166,7 @@ android.util.Log.d("Kixo", "lifecycle=${health.lifecycleState} " +
 ```
 
 For the complete public API (every method, every parameter), see the
-[Android docs](https://docs.kixo.io/docs/sdk/android).
+[Android docs](https://docs.kixo.io/sdk/android).
 
 ---
 
