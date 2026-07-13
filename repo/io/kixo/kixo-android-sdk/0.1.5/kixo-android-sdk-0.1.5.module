@@ -1,0 +1,169 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.kixo",
+    "module": "kixo-android-sdk",
+    "version": "0.1.5",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kixo-android-sdk-0.1.5.aar",
+          "url": "kixo-android-sdk-0.1.5.aar",
+          "size": 912256,
+          "sha512": "35d52f255112f6efb99722801c71a3a06ef7e797a1ce2c1759d19a106747a3d1ae9f2e0472ead2b82f4829fa42d46ebd8a4840eb021dd3b63de4ef90eba1edea",
+          "sha256": "02f7b64d1ad25d23c5d2ba09266975147f0ee46982b06a9815b88d1cefc6b54f",
+          "sha1": "6ec9332a1d8b807ff64994ddf468e0a98fb9e784",
+          "md5": "ebbf7c1d7ac28c6001d89e541f745d18"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.8.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.12.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-process",
+          "version": {
+            "requires": "2.8.6"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-common-java8",
+          "version": {
+            "requires": "2.8.6"
+          }
+        },
+        {
+          "group": "androidx.sqlite",
+          "module": "sqlite",
+          "version": {
+            "requires": "2.4.0"
+          }
+        },
+        {
+          "group": "androidx.sqlite",
+          "module": "sqlite-framework",
+          "version": {
+            "requires": "2.4.0"
+          }
+        },
+        {
+          "group": "androidx.work",
+          "module": "work-runtime-ktx",
+          "version": {
+            "requires": "2.9.1"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.8.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kixo-android-sdk-0.1.5.aar",
+          "url": "kixo-android-sdk-0.1.5.aar",
+          "size": 912256,
+          "sha512": "35d52f255112f6efb99722801c71a3a06ef7e797a1ce2c1759d19a106747a3d1ae9f2e0472ead2b82f4829fa42d46ebd8a4840eb021dd3b63de4ef90eba1edea",
+          "sha256": "02f7b64d1ad25d23c5d2ba09266975147f0ee46982b06a9815b88d1cefc6b54f",
+          "sha1": "6ec9332a1d8b807ff64994ddf468e0a98fb9e784",
+          "md5": "ebbf7c1d7ac28c6001d89e541f745d18"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "kixo-android-sdk-0.1.5-sources.jar",
+          "url": "kixo-android-sdk-0.1.5-sources.jar",
+          "size": 1181433,
+          "sha512": "bd39ea2342f9dd22a7654fce03b5d8c215b42b5e7e7f1b554d8eecc683a1344e2a9a6db54190d67c3dca9a21ad7a7bcf72e8fee3848a2fe09bb86fd0bf3def33",
+          "sha256": "c7bb000ced9ac7cce67562fcd700e36c0743e80d1ea3be0572b205545b6075bd",
+          "sha1": "a805e6bb149056395186f89727bb35f24d01e3b1",
+          "md5": "46876cc44957755b0c287a450ec8ec0d"
+        }
+      ]
+    }
+  ]
+}
